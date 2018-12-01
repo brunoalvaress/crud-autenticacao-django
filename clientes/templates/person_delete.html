@@ -1,0 +1,20 @@
+{% extends 'registration/base.html' %}
+
+{% block title %} Remoção de Cliente {% endblock %}
+
+
+{% block main %}
+
+
+
+        <h1>Tem certeza que deseja deletar o registro abaixo?</h1>
+        <br><br><br><br><br>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <button type="submit" class="btn btn-danger">Sim</button>
+        </form>
+        <br>
+            <a href="{% url 'persons_list' %}" class="btn btn-dark">Não</a>
+
+{% endblock %}

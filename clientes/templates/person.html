@@ -1,0 +1,34 @@
+{% extends 'registration/base.html' %}
+
+{% block title %} Lista de Clientes {% endblock %}
+
+
+{% block main %}
+
+
+
+        <ul class="list-group">
+        <h1>LISTA DE CLIENTES</h1>
+        {% for person in persons %}
+
+            <li class="list-group-item">
+                <a href="{% url 'person_update' person.id %}"> {{ person.first_name }} {{person.last_name}}</a>
+                <a href="{% url 'person_delete' person.id%}">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+
+
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+    <br><br>
+
+        <a  class="btn btn-dark" href="{% url 'person_new' %}">Cadastrar</a>
+        <a class="btn btn-danger" href="{% url 'logout' %}">Sair</a>
+
+
+{% endblock %}
+

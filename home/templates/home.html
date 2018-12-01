@@ -1,0 +1,17 @@
+{% extends 'registration/base.html' %}
+
+{% block title %} Página Inicial {% endblock %}
+
+
+{% block main %}
+        <h1>Seja bem vindo</h1>
+
+
+        {% if user.is_authenticated %}
+            <p>Olá {{ user.username }}</p>
+            <a type="submit" class="btn btn-dark" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a type="submit" class="btn btn-dark" href="{% url 'login' %}">Login</a>
+        {% endif %}
+
+{% endblock %}
