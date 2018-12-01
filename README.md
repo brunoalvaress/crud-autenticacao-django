@@ -35,6 +35,7 @@ O frontend consiste em design simples, somente para testar e ver as alterações
 4. Criar um administrador com `python manage.py createsuperuser`
 5. Acessar http://localhost:8000/ e realizar o login
 
+## Ilustrativo
 
 
 
