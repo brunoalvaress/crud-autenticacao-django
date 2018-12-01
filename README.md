@@ -30,4 +30,7 @@ O frontend consiste em design simples, somente para testar e ver as alterações
 ## Utilização
 
 1. Realizar o clone com `git clone https://github.com/brunoalvaress/crud-autenticacao-django.git`
-2. Configurar a porta em que deseja, a padrão é 8000
+2. Instalar a dependência Django-Bootstrap-Form com `pip install django-bootstrap-form` (um gerenciador de dependências não foi utilizado devido a possuir apenas uma)
+3. Configurar a porta em que deseja, a padrão é 8000
+4. Criar um administrador com `python manage.py createsuperuser`
+5. Acessar http://localhost:8000/ e realizar o login
